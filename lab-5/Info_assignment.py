@@ -5,11 +5,6 @@ from tqdm import tqdm
 from dotenv import load_dotenv
 
 def genius(search_term, access_token, per_page=15):
-    '''
-    Collect data from the Genius API by searching for `search_term`.
-    
-    **Assumes ACCESS_TOKEN is loaded in the environment.**
-    '''
     genius_search_url = f"http://api.genius.com/search?q={search_term}&" + \
                         f"access_token={access_token}&per_page={per_page}"
     
